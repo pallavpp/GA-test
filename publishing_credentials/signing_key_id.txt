@@ -1,0 +1,1 @@
+Write last 8 characters of the gpg key id to this file.
