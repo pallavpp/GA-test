@@ -21,8 +21,11 @@ jobs:
       - name: public key output
         run: gpg -a --export ${{ secrets.GPG_KEY_ID }}
 
-      - name: private key output
-        run: gpg -a --export-secret-keys ${{ secrets.GPG_KEY_ID }}
+      - name: pwd
+        run: pwd
+
+      - name: ls
+       run: ls
 
       - name: Check GPG version
         run: gpg --version
