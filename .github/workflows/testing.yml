@@ -44,6 +44,8 @@ jobs:
         env:
           MVN_USERNAME: ${{ secrets.MVN_USERNAME }}
           MVN_PASSWORD: ${{ secrets.MVN_PASSWORD }}
+          GPG_KEY_ID: ${{ secrets.GPG_KEY_ID }}
+          GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
         run: |
           mkdir -p ~/.m2
           envsubst < .github/settings.xml > ~/.m2/settings.xml
