@@ -20,6 +20,3 @@ jobs:
           gpg --list-secret-keys || true
           echo "== Public Keys =="
           gpg --list-keys || true
-
-      - name: Print GNUPG directory
-        run: echo "GNUPGHOME is: $GNUPGHOME"
