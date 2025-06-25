@@ -36,3 +36,6 @@ jobs:
           gpg --list-secret-keys || true
           echo "== Public Keys =="
           gpg --list-keys || true
+
+      - name: deploy
+        run: mvn deploy
