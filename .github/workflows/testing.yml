@@ -47,4 +47,4 @@ jobs:
           cat ~/.m2/settings.xml
 
       - name: deploy
-        run: mvn deploy -X
+        run: mvn deploy -e
