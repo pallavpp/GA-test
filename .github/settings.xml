@@ -8,20 +8,20 @@
             <username>$MVN_USERNAME</username>
             <password>$MVN_PASSWORD</password>
         </server>
-<!--        <server>-->
-<!--            <id>id</id>-->
-<!--            <passphrase>pass</passphrase>-->
-<!--        </server>-->
+       <server>
+           <id>$GPG_KEY_ID</id>
+           <passphrase>$GPG_PASSPHRASE</passphrase>
+       </server>
     </servers>
-<!--    <profiles>-->
-<!--        <profile>-->
-<!--            <id>my_profile_id</id>-->
-<!--            <activation>-->
-<!--                <activeByDefault>true</activeByDefault>-->
-<!--            </activation>-->
-<!--            <properties>-->
-<!--                <gpg.keyname>id</gpg.keyname>-->
-<!--            </properties>-->
-<!--        </profile>-->
-<!--    </profiles>-->
+   <profiles>
+       <profile>
+           <id>gpg.signing</id>
+           <activation>
+               <activeByDefault>true</activeByDefault>
+           </activation>
+           <properties>
+               <gpg.keyname>$GPG_KEY_ID</gpg.keyname>
+           </properties>
+       </profile>
+   </profiles>
 </settings>
