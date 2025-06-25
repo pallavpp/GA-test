@@ -27,8 +27,11 @@ jobs:
       - name: ls
         run: ls
 
-      - name: Check GPG version
-        run: gpg --version
+      - name: Check versions
+        run: |
+          gpg --version
+          java --version
+          mvn --version
 
       - name: List existing GPG keys
         run: |
