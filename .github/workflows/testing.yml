@@ -1,0 +1,25 @@
+name: GPG Debug
+
+on:
+  workflow_dispatch: # Allows you to manually trigger the workflow
+
+jobs:
+  debug:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Check GPG version
+        run: gpg --version
+
+      - name: List existing GPG keys
+        run: |
+          echo "== Secret Keys =="
+          gpg --list-secret-keys || true
+          echo "== Public Keys =="
+          gpg --list-keys || true
+
+      - name: Print GNUPG directory
+        run: echo "GNUPGHOME is: $GNUPGHOME"
