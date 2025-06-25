@@ -5,8 +5,8 @@
     <servers>
         <server>
             <id>central</id>
-            <username>username</username>
-            <password>pass</password>
+            <username>${{ secrets.MVN_USERNAME }}</username>
+            <password>${{ secrets.MVN_PASSWORD }}</password>
         </server>
 <!--        <server>-->
 <!--            <id>id</id>-->
