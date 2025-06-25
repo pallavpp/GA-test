@@ -37,5 +37,10 @@ jobs:
           echo "== Public Keys =="
           gpg --list-keys || true
 
+      - name: Setup Maven settings
+        run: |
+          mkdir -p ~/.m2
+          envsubst < .github/maven/settings.xml > ~/.m2/settings.xml
+
       - name: deploy
         run: mvn deploy
