@@ -39,8 +39,8 @@ jobs:
 
       - name: Setup Maven settings
         env:
-          MVN_USERNAME: ${{ secrets.OSSRH_USERNAME }}
-          MVN_PASSWORD: ${{ secrets.OSSRH_PASSWORD }}
+          MVN_USERNAME: ${{ secrets.MVN_USERNAME }}
+          MVN_PASSWORD: ${{ secrets.MVN_PASSWORD }}
         run: |
           mkdir -p ~/.m2
           envsubst < .github/settings.xml > ~/.m2/settings.xml
