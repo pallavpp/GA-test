@@ -55,4 +55,4 @@ jobs:
           cat ~/.m2/settings.xml
 
       - name: deploy
-        run: mvn deploy -e
+        run: mvn deploy -Psign-artifacts
