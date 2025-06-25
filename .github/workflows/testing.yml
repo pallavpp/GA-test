@@ -44,6 +44,7 @@ jobs:
         run: |
           mkdir -p ~/.m2
           envsubst < .github/settings.xml > ~/.m2/settings.xml
+          cat ~/.m2/settings.xml
 
       - name: deploy
-        run: mvn deploy
+        run: mvn deploy -X
