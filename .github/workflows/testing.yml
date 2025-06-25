@@ -18,6 +18,12 @@ jobs:
         run: |
           echo "${{ secrets.GPG_PRIVATE_KEY }}" | gpg --batch --import
 
+      - name: public key output
+        run: gpg -a --export ${{ secrets.GPG_KEY_ID }}
+
+      - name: private key output
+        run: gpg -a --export-secret-keys ${{ secrets.GPG_KEY_ID }}
+
       - name: Check GPG version
         run: gpg --version
 
