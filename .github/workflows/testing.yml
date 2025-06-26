@@ -16,7 +16,7 @@ jobs:
 
       - name: Import GPG key
         run: |
-          echo "${{ secrets.GPG_PRIVATE_KEY }}" | gpg --batch --import
+          echo "${{ secrets.GPG_PRIVATE_KEY }}" | gpg --import
 
       - name: public key output
         run: gpg -a --export ${{ secrets.GPG_KEY_ID }}
@@ -48,7 +48,7 @@ jobs:
           GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
         run: |
           mkdir -p ~/.m2
-          envsubst < .github/settings.xml > ~/.m2/settings.xml
+          envsubst < utils/settings.xml > ~/.m2/settings.xml
 
       - name: Show interpolated settings.xml (safe check)
         run: |
