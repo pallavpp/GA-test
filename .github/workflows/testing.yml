@@ -16,7 +16,7 @@ jobs:
 
       - name: Import GPG key
         run: |
-          echo "${{ secrets.GPG_PRIVATE_KEY }}" | gpg --import
+          echo "${{ secrets.GPG_PRIVATE_KEY }}" | gpg --batch --import
 
       - name: public key output
         run: gpg -a --export ${{ secrets.GPG_KEY_ID }}
