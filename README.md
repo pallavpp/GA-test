@@ -1,4 +1,4 @@
-# test
+# rest-api-sdk-lib
 
 Java client for ThoughtSpot's [v2 Rest APIs](https://developers.thoughtspot.com/docs/rest-api-v2).
 
@@ -12,9 +12,9 @@ Add this dependency to your project's POM:
 
 ```xml
 <dependency>
-  <groupId>io.github.pallavpp</groupId>
-  <artifactId>test</artifactId>
-  <version>0.1.0</version>
+  <groupId>io.github.thoughtspot</groupId>
+  <artifactId>rest-api-sdk-lib</artifactId>
+  <version>2.12.0-beta</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -29,7 +29,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "io.github.pallavpp:test:0.1.0"
+     implementation "io.github.thoughtspot:rest-api-sdk-lib:2.12.0-beta"
   }
 ```
 
